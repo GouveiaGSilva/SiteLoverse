@@ -79,6 +79,14 @@ import img78 from '../assets/images/IMG_9139.webp';
 import img79 from '../assets/images/IMG_9140.webp';
 import img80 from '../assets/images/IMG_9141.webp';
 import img81 from '../assets/images/IMG_9142.webp';
+import imgf1 from '../assets/images/584395204_17860766421541556_3792367704802633417_n.webp';
+import imgf2 from '../assets/images/2-588043615_17861008446541556_608291620652641538_n.webp';
+import imgf3 from '../assets/images/4-586720995_17861007777541556_3464295914605291932_n.webp';
+import imgf4 from '../assets/images/5-588380839_17860763574541556_1448967610046714424_n.webp';
+import imgf5 from '../assets/images/6-550864012_17853294279541556_5578832735648784242_n.webp';
+import imgf6 from '../assets/images/7-565786227_17860760427541556_8268998592596766076_n.webp';
+import imgf7 from '../assets/images/8-565895975_17857456572541556_7900560336057217845_n.webp';
+import imglogo from '../assets/images/LogoLoverse.webp';
 
 export const IMAGES = {
     img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
@@ -89,7 +97,7 @@ export const IMAGES = {
     img51, img52, img53, img54, img55, img56, img57, img58, img59, img60,
     img61, img62, img63, img64, img65, img66, img67, img68, img69, img70,
     img71, img72, img73, img74, img75, img76, img77, img78, img79, img80,
-    img81
+    img81, imgf1, imgf2, imgf3, imgf4, imgf5, imgf6, imgf7, imglogo
 };
 
 export const IMAGE_LIST = [
@@ -101,5 +109,5 @@ export const IMAGE_LIST = [
     img51, img52, img53, img54, img55, img56, img57, img58, img59, img60,
     img61, img62, img63, img64, img65, img66, img67, img68, img69, img70,
     img71, img72, img73, img74, img75, img76, img77, img78, img79, img80,
-    img81
+    img81,imgf1, imgf2, imgf3, imgf4, imgf5, imgf6, imgf7, imglogo
 ];

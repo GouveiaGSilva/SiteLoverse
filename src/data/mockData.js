@@ -4,21 +4,21 @@ import { IMAGES } from './images';
 export const HERO_SLIDES = [
     {
         id: 1,
-        image: IMAGES.img1,
-        title: "Lançamento Nova Estação",
-        subtitle: "Para Homens & Mulheres",
+        image: IMAGES.img66,
+        title: "Lançamento",
+        subtitle: "Sua Moda em toda a estação",
         counter: "01"
     },
     {
         id: 2,
-        image: IMAGES.img2,
+        image: IMAGES.img67,
         title: "Essenciais Atemporais",
         subtitle: "Redefinindo o Básico",
         counter: "02"
     },
     {
         id: 3,
-        image: IMAGES.img3,
+        image: IMAGES.img51,
         title: "Coleção de Inverno",
         subtitle: "Elegância Moderna",
         counter: "03"
@@ -28,44 +28,38 @@ export const HERO_SLIDES = [
 export const BESTSELLERS = [
     {
         id: 1,
-        name: "Essential Hoodie",
-        price: "R$ 299,00",
-        image: IMAGES.img4,
+        name: "Conjunto Flora",
+        image: IMAGES.img59,
     },
     {
         id: 2,
-        name: "Ocean Hoodie",
-        price: "R$ 299,00",
-        image: IMAGES.img5,
+        name: "Conjunto Coral azul",
+        image: IMAGES.img70,
     },
     {
         id: 3,
-        name: "Forest Oversize T-Shirt",
-        price: "R$ 149,00",
-        image: IMAGES.img6,
+        name: "Vestido Anfitriã",
+        image: IMAGES.img46,
     }
 ];
 
 export const NEW_ARRIVALS_HOME = [
     {
         id: 105,
-        name: "Sand Oversize T-Shirt",
-        price: "R$ 149,00",
+        name: "Conjunto Diplomata",
         tag: "NOVO",
-        image: IMAGES.img7
+        image: IMAGES.img81
     },
     {
         id: 108,
-        name: "Faded Black Jeans",
-        price: "R$ 239,00",
-        image: IMAGES.img8
+        name: "Vestido Luna",
+        image: IMAGES.img40
     },
     {
         id: 109,
-        name: "Distressed Light Jeans",
-        price: "R$ 239,00",
+        name: "Coleção Governante",
         tag: "NOVO",
-        image: IMAGES.img9
+        image: IMAGES.img21
     }
 ];
 
@@ -201,15 +195,14 @@ export const WOMEN_PRODUCTS = [
     }
 ];
 
-export const SOCIAL_IMAGES = [
-    IMAGES.img25,
-    IMAGES.img26,
-    IMAGES.img27,
-    IMAGES.img28,
-    IMAGES.img29,
-    IMAGES.img30,
-    IMAGES.img31,
-    IMAGES.img32
+export const INSTAGRAM_POSTS = [
+    { image: IMAGES.imgf1, link: 'https://www.instagram.com/p/DRXkUt3gVO5/?img_index=1' },
+    { image: IMAGES.imgf2, link: 'https://www.instagram.com/p/DRc3FOIgc-X/?img_index=1' },
+    { image: IMAGES.imgf3, link: 'https://www.instagram.com/p/DRc18itgfOO/?img_index=1' },
+    { image: IMAGES.imgf4, link: 'https://www.instagram.com/p/DRXgHwGAQWk/?img_index=1' },
+    { image: IMAGES.imgf5, link: 'https://www.instagram.com/p/DO0uDvgkZc6/?img_index=1' },
+    { image: IMAGES.imgf6, link: 'https://www.instagram.com/p/DRXcxh8Efsz/?img_index=1' },
+    { image: IMAGES.imgf7, link: 'https://www.instagram.com/p/DQMiBVvEQCm/?img_index=1' },
 ];
 
 export const FEATURES = [

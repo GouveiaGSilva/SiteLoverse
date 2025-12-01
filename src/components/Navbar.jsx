@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ShoppingBag, Menu, X } from 'lucide-react';
+import { Search, ShoppingBag, Menu, X, MessageCircle } from 'lucide-react';
+
+import { IMAGES } from '../data/images';
 
 const Navbar = ({ setPage, isScrolled }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +18,6 @@ const Navbar = ({ setPage, isScrolled }) => {
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Desktop Nav */}
                 <div className="hidden md:flex space-x-8">
-                    <button onClick={() => handleNav('men')} className="text-sm font-medium hover:opacity-70 transition-opacity">Homem</button>
                     <button onClick={() => handleNav('women')} className="text-sm font-medium hover:opacity-70 transition-opacity">Mulher</button>
                     <button onClick={() => handleNav('story')} className="text-sm font-medium hover:opacity-70 transition-opacity">Nossa História</button>
                     <button onClick={() => handleNav('contact')} className="text-sm font-medium hover:opacity-70 transition-opacity">Contato</button>
@@ -24,23 +25,19 @@ const Navbar = ({ setPage, isScrolled }) => {
 
                 {/* Logo */}
                 <div
-                    className="text-2xl font-bold tracking-widest uppercase absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
+                    className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
                     onClick={() => handleNav('home')}
                 >
-                    Loverse
+                    <img src={IMAGES.imglogo} alt="Loverse" className={`h-8 md:h-12 w-auto transition-all duration-500`} />
                 </div>
 
                 {/* Icons */}
                 <div className="flex items-center space-x-6">
-                    <Search className="w-5 h-5 cursor-pointer hover:opacity-70 transition-opacity" />
-                    <div className="relative cursor-pointer hover:opacity-70 transition-opacity">
-                        <ShoppingBag className="w-5 h-5" />
-                        <span className={`absolute -top-2 -right-2 text-[10px] w-4 h-4 flex items-center justify-center rounded-full ${isScrolled ? 'bg-black text-white' : 'bg-white text-black'}`}>2</span>
-                    </div>
                     <Menu
                         className="w-6 h-6 md:hidden cursor-pointer"
                         onClick={() => setMobileMenuOpen(true)}
                     />
+                    <a href="https://wa.me/5518991020083" target="_blank"><MessageCircle className="w-6 h-6 cursor-pointer" /></a>
                 </div>
             </div>
 

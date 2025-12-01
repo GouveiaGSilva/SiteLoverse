@@ -117,7 +117,7 @@ const CollectionsSplit = ({ setPage }) => {
 
                 <div className="absolute bottom-12 left-8 md:bottom-16 md:left-12 text-white flex flex-col items-start">
                     <h3 className="text-5xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
-                        Coleção<br />Masculina
+                        Coleção<br />Vestidos
                     </h3>
                     <button className="bg-white text-black px-8 py-4 text-sm font-bold tracking-wide hover:bg-neutral-200 transition-colors flex items-center gap-2 uppercase">
                         Comprar Agora <ArrowRight size={14} />
@@ -128,7 +128,7 @@ const CollectionsSplit = ({ setPage }) => {
             {/* Women */}
             <div className="relative group overflow-hidden cursor-pointer" onClick={() => { setPage('women'); window.scrollTo(0, 0); }}>
                 <img
-                    src={IMAGES.img36}
+                    src={IMAGES.img59}
                     alt="Women"
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -138,7 +138,7 @@ const CollectionsSplit = ({ setPage }) => {
 
                 <div className="absolute bottom-12 left-8 md:bottom-16 md:left-12 text-white flex flex-col items-start">
                     <h3 className="text-5xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
-                        Coleção<br />Feminina
+                        Coleção<br />Conjuntos
                     </h3>
                     <button className="bg-white text-black px-8 py-4 text-sm font-bold tracking-wide hover:bg-neutral-200 transition-colors flex items-center gap-2 uppercase">
                         Comprar Agora <ArrowRight size={14} />

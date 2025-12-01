@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Twitter, Facebook } from 'lucide-react';
-import { SOCIAL_IMAGES, FEATURES } from '../data/mockData';
+import { INSTAGRAM_POSTS, FEATURES } from '../data/mockData';
+import { IMAGES } from '../data/images';
 
 const Footer = () => {
     return (
@@ -12,13 +13,19 @@ const Footer = () => {
                     <h3 className="text-2xl md:text-3xl font-bold">Siga-nos @loverse para novidades</h3>
                 </div>
                 <div className="flex gap-4 animate-scroll w-max hover:pause">
-                    {[...SOCIAL_IMAGES, ...SOCIAL_IMAGES].map((img, i) => (
-                        <div key={i} className="w-64 h-64 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer overflow-hidden relative group">
-                            <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Social" />
+                    {[...INSTAGRAM_POSTS, ...INSTAGRAM_POSTS].map((post, i) => (
+                        <a
+                            key={i}
+                            href={post.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-64 h-64 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer overflow-hidden relative group block"
+                        >
+                            <img src={post.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Social" />
                             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                 <Instagram className="w-8 h-8 text-white" />
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
@@ -40,8 +47,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
                     <div className="lg:col-span-5 flex flex-col justify-between h-full">
                         <div>
-                            <h2 className="text-[15vw] lg:text-[8rem] font-bold tracking-tighter leading-none mb-6 select-none text-white">
-                                LOVERSE
+                            <h2 className="mb-6 select-none">
+                                <img src={IMAGES.imglogo} alt="Loverse" className="h-24 md:h-32 w-auto brightness-0 invert" />
                             </h2>
                             <p className="text-neutral-500 max-w-md text-lg font-light">
                                 © 2025 Loverse. Redefinindo a moda com essenciais atemporais.
