@@ -16,6 +16,8 @@ const LoadingFallback = () => (
     </div>
 );
 
+import ErrorBoundary from './components/ErrorBoundary';
+
 const App = () => {
     const [page, setPage] = useState('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -29,28 +31,32 @@ const App = () => {
 
     if (!isAuthenticated) {
         return (
-            <Suspense fallback={<LoadingFallback />}>
-                <ComingSoon onLogin={() => setIsAuthenticated(true)} />
-            </Suspense>
+            <ErrorBoundary>
+                <Suspense fallback={<LoadingFallback />}>
+                    <ComingSoon onLogin={() => setIsAuthenticated(true)} />
+                </Suspense>
+            </ErrorBoundary>
         );
     }
 
     return (
-        <div className="font-sans text-neutral-900 bg-white antialiased selection:bg-neutral-900 selection:text-white">
-            <Navbar setPage={setPage} isScrolled={isScrolled} />
+        <ErrorBoundary>
+            <div className="font-sans text-neutral-900 bg-white antialiased selection:bg-neutral-900 selection:text-white">
+                <Navbar setPage={setPage} isScrolled={isScrolled} />
 
-            <main>
-                <Suspense fallback={<LoadingFallback />}>
-                    {page === 'home' && <Home setPage={setPage} />}
-                    {page === 'men' && <Men />}
-                    {page === 'women' && <Women />}
-                    {page === 'story' && <Story />}
-                    {page === 'contact' && <Contact />}
-                </Suspense>
-            </main>
+                <main>
+                    <Suspense fallback={<LoadingFallback />}>
+                        {page === 'home' && <Home setPage={setPage} />}
+                        {page === 'men' && <Men />}
+                        {page === 'women' && <Women />}
+                        {page === 'story' && <Story />}
+                        {page === 'contact' && <Contact />}
+                    </Suspense>
+                </main>
 
-            <Footer />
-        </div>
+                <Footer />
+            </div>
+        </ErrorBoundary>
     );
 };
 

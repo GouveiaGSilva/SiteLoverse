@@ -14,7 +14,7 @@ const Navbar = ({ setPage, isScrolled }) => {
     };
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-sm text-black' : 'bg-transparent py-6 text-white'}`}>
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white py-4 shadow-sm text-black' : 'bg-transparent py-6 text-white'}`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Desktop Nav */}
                 <div className="hidden md:flex space-x-8">
@@ -57,7 +57,6 @@ const Navbar = ({ setPage, isScrolled }) => {
                         </div>
                         <div className="flex flex-col space-y-6">
                             <button onClick={() => handleNav('home')} className="text-3xl font-medium tracking-tight text-left">Início</button>
-                            <button onClick={() => handleNav('men')} className="text-3xl font-medium tracking-tight text-left">Homem</button>
                             <button onClick={() => handleNav('women')} className="text-3xl font-medium tracking-tight text-left">Mulher</button>
                             <button onClick={() => handleNav('story')} className="text-3xl font-medium tracking-tight text-left">Nossa História</button>
                             <button onClick={() => handleNav('contact')} className="text-3xl font-medium tracking-tight text-left">Contato</button>
