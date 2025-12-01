@@ -1,12 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Men from './pages/Men';
-import Women from './pages/Women';
-import Story from './pages/Story';
-import Contact from './pages/Contact';
-import ComingSoon from './pages/ComingSoon';
+
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const Men = React.lazy(() => import('./pages/Men'));
+const Women = React.lazy(() => import('./pages/Women'));
+const Story = React.lazy(() => import('./pages/Story'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const ComingSoon = React.lazy(() => import('./pages/ComingSoon'));
+
+const LoadingFallback = () => (
+    <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-black"></div>
+    </div>
+);
 
 const App = () => {
     const [page, setPage] = useState('home');
@@ -20,7 +28,11 @@ const App = () => {
     }, []);
 
     if (!isAuthenticated) {
-        return <ComingSoon onLogin={() => setIsAuthenticated(true)} />;
+        return (
+            <Suspense fallback={<LoadingFallback />}>
+                <ComingSoon onLogin={() => setIsAuthenticated(true)} />
+            </Suspense>
+        );
     }
 
     return (
@@ -28,11 +40,13 @@ const App = () => {
             <Navbar setPage={setPage} isScrolled={isScrolled} />
 
             <main>
-                {page === 'home' && <Home setPage={setPage} />}
-                {page === 'men' && <Men />}
-                {page === 'women' && <Women />}
-                {page === 'story' && <Story />}
-                {page === 'contact' && <Contact />}
+                <Suspense fallback={<LoadingFallback />}>
+                    {page === 'home' && <Home setPage={setPage} />}
+                    {page === 'men' && <Men />}
+                    {page === 'women' && <Women />}
+                    {page === 'story' && <Story />}
+                    {page === 'contact' && <Contact />}
+                </Suspense>
             </main>
 
             <Footer />

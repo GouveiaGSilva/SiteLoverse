@@ -16,6 +16,7 @@ const Story = () => {
                 <img
                     src={IMAGES.img40}
                     alt="Atelier"
+                    loading="lazy"
                     className="w-full h-full object-cover"
                 />
             </section>
@@ -31,8 +32,8 @@ const Story = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                    <img src={IMAGES.img41} className="w-full aspect-[3/4] object-cover bg-gray-100" alt="Detail 1" />
-                    <img src={IMAGES.img42} className="w-full aspect-[3/4] object-cover bg-gray-100 mt-8" alt="Detail 2" />
+                    <img src={IMAGES.img41} loading="lazy" className="w-full aspect-[3/4] object-cover bg-gray-100" alt="Detail 1" />
+                    <img src={IMAGES.img42} loading="lazy" className="w-full aspect-[3/4] object-cover bg-gray-100 mt-8" alt="Detail 2" />
                 </div>
             </section>
         </div>

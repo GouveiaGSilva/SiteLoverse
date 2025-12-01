@@ -109,6 +109,7 @@ const CollectionsSplit = ({ setPage }) => {
                 <img
                     src={IMAGES.img35}
                     alt="Men"
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-blue-900/20 mix-blend-overlay" />
@@ -129,6 +130,7 @@ const CollectionsSplit = ({ setPage }) => {
                 <img
                     src={IMAGES.img36}
                     alt="Women"
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-red-900/30 mix-blend-overlay" />
@@ -177,6 +179,7 @@ const AboutSection = ({ setPage }) => {
                     <img
                         src={IMAGES.img37}
                         alt="About Brand"
+                        loading="lazy"
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -208,7 +211,7 @@ const TestimonialsSection = () => {
                     </h3>
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-neutral-700 rounded-full overflow-hidden">
-                            <img src={IMAGES.img38} className="w-full h-full object-cover" alt="User" />
+                            <img src={IMAGES.img38} loading="lazy" className="w-full h-full object-cover" alt="User" />
                         </div>
                         <div>
                             <p className="font-bold">Emma Collins</p>
@@ -222,6 +225,7 @@ const TestimonialsSection = () => {
                     <img
                         src={IMAGES.img39}
                         alt="Testimonial Context"
+                        loading="lazy"
                         className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                     />
                 </div>
